@@ -4,8 +4,8 @@ public class NineNineTable {
 	
 	public static void main(String args[]){
 		int i, j;
-		for (j=0; j<9; j++){
-			for (i=0; i<j; i++){
+		for (j=1; j<=9; j++){
+			for (i=1; i<=j; i++){
 				System.out.print(i+ "*" + j + " ");
 			}
 			System.out.println();
