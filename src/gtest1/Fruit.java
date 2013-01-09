@@ -5,6 +5,7 @@ public class Fruit {
 	public static void main(String[] args) {
 		Fruit[] Fruit1 = new Fruit[1];
 	    Fruit[] Fruit2 = new Fruit[1];
+//	    Fruit1[0] = new Fruit[1]();
 	    Fruit1[0] = new Fruit();
 	    Fruit2[0] = new Fruit();
 	    Fruit1[0].x = "Apple";
