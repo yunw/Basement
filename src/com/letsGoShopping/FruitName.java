@@ -1,4 +1,4 @@
-package IreneGoesShopping;
+package com.letsGoShopping;
 
 //import IreneGoesShopping.Fruit.FruitName;
 

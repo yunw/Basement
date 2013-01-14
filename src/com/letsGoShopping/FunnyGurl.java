@@ -1,6 +1,6 @@
-package IreneGoesShopping;
+package com.letsGoShopping;
 
-import IreneGoesShopping.Fruit.*;
+import com.letsGoShopping.Fruit.*;
 
 public class FunnyGurl {
 	GroceriesBag gb;
