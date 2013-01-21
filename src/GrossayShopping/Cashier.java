@@ -16,16 +16,16 @@ public class Cashier {
 	
 	String checkRecieve(double money){
 		
-		double total = 100.0;
+		double cost = 100.0;
 		String retrunMsg = null;
-		if (money == total) 
+		if (money == cost) 
 			retrunMsg = "no need for change";
 		
-		else if (money > total)
-			retrunMsg = "need change " + (money-total);
+		else if (money > cost)
+			retrunMsg = "need change " + (money-cost);
 
-		else if(money > total)
-			retrunMsg = "need add more " + (total - money);
+		else if(money < cost)
+			retrunMsg = "need add more " + (cost - money);
 
 		return retrunMsg;
 	}

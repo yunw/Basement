@@ -9,6 +9,7 @@ public class TestCashier {
 	@Test
 	public void testCashierName() {
 		Cashier c = new Cashier();
+		int total = 0;
 		
 		c.name = "jim";
 		
@@ -28,21 +29,18 @@ public class TestCashier {
 		ft[7] = new Fruit("Grape");
 		
 		GrossaryBag coach = new GrossaryBag();
-		for (int i=0; i < 7; i++){
-			coach.addFruitToBag(ft[i]);
-		}
-
-		
 		Person p = new Person("Irene", coach);
 		
-		
-		int total = c.calculateGBTotal(p.getBag());
+		for (int i=0; i < 7; i++){
+			coach.addFruitToBag(ft[i]);
+			total = c.calculateGBTotal(p.getBag());
+		}
 		
 		assertEquals(total, 7);
 		
 //		check method checkReceive
 		String actualRes = c.checkRecieve(90.0);
-		assertEquals(actualRes, "need change " + 10.0);
+		assertEquals("need add more " + 10.0, actualRes);
 		
 		
 	}
