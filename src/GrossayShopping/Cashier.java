@@ -2,9 +2,9 @@ package GrossayShopping;
 
 public class Cashier {
 	String name;
-	int total;
 	
 	int calculateGBTotal(GrossaryBag bag){
+		int total = 0;
 		bag.getFruitsFromBag();
 		System.out.println("getting fruits....");
 		System.out.println("caculating the total Fruits types...");

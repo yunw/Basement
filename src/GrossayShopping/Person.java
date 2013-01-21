@@ -11,19 +11,11 @@ public class Person {
 	
 
 	void putFruitIntheBag (Fruit f){
-
-
-		gb.addFruitToBag(f);
-		
-		
+		gb.addFruitToBag(f);	
 	}
 	
 	GrossaryBag getBag(){
 		return gb;
-		
 	}
-	
-
-
 	
 }
