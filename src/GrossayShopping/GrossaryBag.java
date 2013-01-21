@@ -5,7 +5,7 @@ public class GrossaryBag {
 
 	void addFruitToBag (Fruit sf){
 		int bagmax = 100;
-		for (int i=0 ; i<f.length || i < bagmax; i++)
+		for (int i=0 ; i<f.length && i < bagmax; i++)
 		{ this.f[i] = sf;
 		}
 	}
