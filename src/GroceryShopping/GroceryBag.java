@@ -4,17 +4,31 @@ import java.util.*;
 
 public class GroceryBag {
 	Fruit[] f;
-	int bagsize;
+	Vector<Fruit> FruitBag;
+
+	GroceryBag(Fruit[] f){
+		this.f = f;
+	}
 
 	void addFruitToBag (Fruit sf){
-		List<Fruit> list = new ArrayList<Fruit>();
-		for(int i=0; i< bagsize; i++){
-			list.add(sf); }
-		this.f = list.toArray(new Fruit[list.size()]);	
+		FruitBag.addElement(sf);
+		System.out.println(FruitBag.elements());
+		FruitBag.capacity();
 	}
 	
-	Fruit[] getFruitsFromBag(){
-		return f;
+	Vector<Fruit> getFruitsFromBag(){
+		return FruitBag;
+	}
+	
+	
+	public static void main(String args[]){
+		int i = 5;
+		Fruit[] f = new Fruit[i];
+		GroceryBag coach = new GroceryBag(f);
+		coach.addFruitToBag(new Fruit("Apple"));
+		coach.addFruitToBag(new Fruit("orange"));
+		coach.FruitBag.elements();
+		
 	}
 
 }
