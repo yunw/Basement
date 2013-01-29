@@ -22,9 +22,11 @@ public class GroceryBag {
 		bg.addFruitToBag(new Fruit("orange"));
 	
 		System.out.println ("FruitBag content is: " + FruitBag + "\n");
-		Fruit myFruitRetrievedFromBag = bg.getFruitsFromBag(0);
 		
-		System.out.println ("the fruit i retrieved from the bag is : " + myFruitRetrievedFromBag);
+		for (int i=0; i < FruitBag.capacity(); i++){
+		Fruit myFruitRetrievedFromBag = bg.getFruitsFromBag(i);
+		
+		System.out.println ("the fruit i retrieved from the bag is : " + myFruitRetrievedFromBag.type);}
 	}
 
 }
