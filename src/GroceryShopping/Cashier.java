@@ -1,16 +1,13 @@
 package GroceryShopping;
 
+import java.util.Vector;
+
 public class Cashier {
 	String name;
 	
 	int calculateGBTotal(GroceryBag bag){
-		int total = 0;
-		bag.getFruitsFromBag();
-		System.out.println("getting fruits....");
-		System.out.println("caculating the total Fruits types...");
-		total = total +1;
-		System.out.println(total);
-		return total;
+		int i = bag.FruitBag.capacity();
+		return i;
 	}
 	
 	
@@ -28,6 +25,18 @@ public class Cashier {
 			retrunMsg = "need add more " + (cost - money);
 
 		return retrunMsg;
+	}
+	
+	public static void main(String args[]){
+		
+		GroceryBag gb = new GroceryBag();		
+		gb.addFruitToBag(new Fruit("Apple"));
+		gb.addFruitToBag(new Fruit("orange"));
+		gb.addFruitToBag(new Fruit("banana"));
+		
+		Cashier jill = new Cashier();
+		System.out.println(jill.calculateGBTotal(gb));
+//		if give Vector initialization as empty, always return 10???
 	}
 
 }

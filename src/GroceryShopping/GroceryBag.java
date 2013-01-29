@@ -3,32 +3,28 @@ package GroceryShopping;
 import java.util.*;
 
 public class GroceryBag {
-	Fruit[] f;
-	Vector<Fruit> FruitBag;
+	Vector FruitBag = new Vector(0);
 
-	GroceryBag(Fruit[] f){
-		this.f = f;
-	}
-
-	void addFruitToBag (Fruit sf){
-		FruitBag.addElement(sf);
-		System.out.println(FruitBag.elements());
-		FruitBag.capacity();
+	void addFruitToBag (Fruit f){
+		FruitBag.addElement(f);
 	}
 	
-	Vector<Fruit> getFruitsFromBag(){
-		return FruitBag;
+	Fruit getFruitsFromBag(int i){
+		return (Fruit) FruitBag.get(i);
 	}
 	
 	
 	public static void main(String args[]){
-		int i = 5;
-		Fruit[] f = new Fruit[i];
-		GroceryBag coach = new GroceryBag(f);
-		coach.addFruitToBag(new Fruit("Apple"));
-		coach.addFruitToBag(new Fruit("orange"));
-		coach.FruitBag.elements();
 		
+		GroceryBag bg = new GroceryBag();
+		Vector FruitBag = bg.FruitBag;
+		bg.addFruitToBag(new Fruit("Apple"));
+		bg.addFruitToBag(new Fruit("orange"));
+	
+		System.out.println ("FruitBag content is: " + FruitBag + "\n");
+		Fruit myFruitRetrievedFromBag = bg.getFruitsFromBag(0);
+		
+		System.out.println ("the fruit i retrieved from the bag is : " + myFruitRetrievedFromBag);
 	}
 
 }

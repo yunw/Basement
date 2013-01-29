@@ -31,10 +31,6 @@ public class TestCashier {
 		GroceryBag coach = new GroceryBag();
 		Person p = new Person("Irene", coach);
 		
-		for (int i=0; i < 7; i++){
-			coach.addFruitToBag(ft[i]);
-			total = c.calculateGBTotal(p.getBag());
-		}
 		
 		assertEquals(total, 7);
 		
@@ -44,9 +40,4 @@ public class TestCashier {
 		
 		
 	}
-	
-		
-	
-	
-
 }
