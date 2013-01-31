@@ -1,5 +1,6 @@
 package GroceryShopping;
 
+import java.util.Enumeration;
 import java.util.Vector;
 
 public class Person {
@@ -27,9 +28,11 @@ public class Person {
 		x.putFruitIntheBag(new Fruit("Apples"));
 		x.putFruitIntheBag(new Fruit("Banana"));
 		x.putFruitIntheBag(new Fruit("herbs"));
-		System.out.println(x.name + " put " + x.getBag() + " in to her bag.");
-		
-		
+
+		Enumeration bgEn = x.getBag().elements();
+		while(bgEn.hasMoreElements()){
+			System.out.print(x.name + " put " + bgEn.nextElement() + "" + " in to her bag." + "\n");
+		}
 	}
 	
 	

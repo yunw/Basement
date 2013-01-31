@@ -2,7 +2,7 @@ package GroceryShopping;
 
 
 public class GroceryStore {
-	Fruit[] fruit;
+	GroceryBag gb;
 	Person p;
 	Cashier c;
 	

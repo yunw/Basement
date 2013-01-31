@@ -29,7 +29,7 @@ public class TestCashier {
 		ft[7] = new Fruit("Grape");
 		
 		GroceryBag coach = new GroceryBag();
-		Person p = new Person("Irene", coach);
+		Person p = new Person("Monster", coach);
 		
 		
 		assertEquals(total, 7);

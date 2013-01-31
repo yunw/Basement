@@ -17,16 +17,19 @@ public class GroceryBag {
 	public static void main(String args[]){
 		
 		GroceryBag bg = new GroceryBag();
-		Vector FruitBag = bg.FruitBag;
+		Vector FruitBag1 = bg.FruitBag;
+		FruitBag1.clear();
 		bg.addFruitToBag(new Fruit("Apple"));
 		bg.addFruitToBag(new Fruit("orange"));
 	
-		System.out.println ("FruitBag content is: " + FruitBag + "\n");
+		System.out.println ("FruitBag content is: " + FruitBag1 + "\n");
+		System.out.println("there are fruit(s) in the bag : " + FruitBag1.capacity());
+		System.out.print("the fruit(s) retrieved from the bag is : " );
 		
-		for (int i=0; i < FruitBag.capacity(); i++){
+		for (int i=0; i < FruitBag1.capacity(); i++){
 		Fruit myFruitRetrievedFromBag = bg.getFruitsFromBag(i);
 		
-		System.out.println ("the fruit i retrieved from the bag is : " + myFruitRetrievedFromBag.type);}
+		System.out.print (myFruitRetrievedFromBag.type + " ");}
 	}
 
 }
